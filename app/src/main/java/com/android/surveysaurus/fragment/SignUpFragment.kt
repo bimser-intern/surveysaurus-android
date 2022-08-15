@@ -14,6 +14,8 @@ import androidx.navigation.Navigation
 import com.android.surveysaurus.R
 import com.android.surveysaurus.activity.MainActivity
 import com.android.surveysaurus.databinding.FragmentSignUpBinding
+import com.android.surveysaurus.model.SignUpModel
+import com.android.surveysaurus.service.ApiService
 
 
 class SignUpFragment : Fragment() {
@@ -75,46 +77,73 @@ class SignUpFragment : Fragment() {
         binding.visiblePassword.setOnTouchListener(View.OnTouchListener { v, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    binding.editTextTextPassword.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)// PRESSED
+                    binding.editTextTextPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD// PRESSED
                     return@OnTouchListener true
                 }// if you want to handle the touch event
                 MotionEvent.ACTION_UP -> {
-                    binding.editTextTextPassword.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)// RELEASED
+                    binding.editTextTextPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD// RELEASED
                     return@OnTouchListener true
                 }// if you want to handle the touch event
             }
             false
         })
-binding.donTHave.setOnClickListener {
-    val action=SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
-    Navigation.findNavController(it).navigate(action)
+
+        binding.visiblePassword2.setOnTouchListener(View.OnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    binding.editTextTextPassword2.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD// PRESSED
+                    return@OnTouchListener true
+                }// if you want to handle the touch event
+                MotionEvent.ACTION_UP -> {
+                    binding.editTextTextPassword2.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD// RELEASED
+                    return@OnTouchListener true
+                }// if you want to handle the touch event
+            }
+            false
+        })
+
+
+
+
+    binding.donTHave.setOnClickListener {
+     val action=SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
+        Navigation.findNavController(it).navigate(action)
 }
 
         binding.button.setOnClickListener {
             val name=    binding.nameTextview.text
             val email=binding.editTextTextEmailAddress.text
             val password=binding.editTextTextPassword.text
+            val confirmPassword=binding.editTextTextPassword2.text
             val gender =binding.spinnerGender.selectedItem.toString()
             val country =binding.spinnerCountry.text.toString()
             val city =binding.spinnerCity.text.toString()
-            if (!name.isNullOrEmpty() && !email.isNullOrEmpty()&&!password.isNullOrEmpty()&&!gender.isNullOrEmpty()&&!country.isNullOrEmpty()&&!city.isNullOrEmpty())
+            if (!name.isNullOrEmpty() && !email.isNullOrEmpty()&&!password.isNullOrEmpty()&&!gender.isNullOrEmpty()&&
+                !country.isNullOrEmpty()&&!city.isNullOrEmpty() && !confirmPassword.isNullOrEmpty())
             {
                 if(!email.endsWith(".com") || !email.contains("@")) {
                     Toast.makeText(
                         view.context,
                         "Please enter a correct email", Toast.LENGTH_SHORT
-                    ).show();
+                    ).show()
                 }
-                else if (password.length<8) {
+                else if (!password.equals(confirmPassword)) {
+                    Toast.makeText(
+                        view.context,
+                        "Your passwords needs to match", Toast.LENGTH_SHORT
+                    ).show()
+                }
+                else if (password.length<8 ) {
                     Toast.makeText(
                         view.context,
                         "Your password needs to contain at least 8 letters", Toast.LENGTH_SHORT
-                    ).show();
+                    ).show()
                 }
+
                 else {
-                    try{/*
+                    try{
                         val apiService = ApiService()
-                        var signUpModel:SignUpModel= SignUpModel(
+                        var signUpModel: SignUpModel = SignUpModel(
                             name.toString(),
                             email.toString(),
                             password.toString(),
@@ -132,7 +161,7 @@ binding.donTHave.setOnClickListener {
                                 Toast.makeText(view.context,
                                     "Fail",Toast.LENGTH_SHORT).show();
                             }
-                        }*/
+                        }
 
                     }
                     catch (e:Exception){
@@ -145,7 +174,7 @@ e.printStackTrace()
             }
             else{
                 Toast.makeText(view.context,
-                        "Please fill in the starred fields",Toast.LENGTH_SHORT).show();
+                        "Please fill in the starred fields",Toast.LENGTH_SHORT).show()
 
             }
 
