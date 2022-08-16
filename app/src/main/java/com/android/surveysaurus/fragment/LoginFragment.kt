@@ -12,6 +12,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.android.surveysaurus.activity.MainActivity
 import com.android.surveysaurus.databinding.FragmentLoginBinding
+import com.android.surveysaurus.model.LoginModel
+import com.android.surveysaurus.service.ApiService
+import com.android.surveysaurus.singleton.LoginSingleton
 
 
 class LoginFragment : Fragment() {
@@ -50,16 +53,16 @@ class LoginFragment : Fragment() {
         })
 
 
-  binding.donTHave.setOnClickListener {
-      val action = LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
-      Navigation.findNavController(it).navigate(action)
-  }
+        binding.donTHave.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
-      binding.forgotPassword.setOnClickListener {
-          val action=LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
-          Navigation.findNavController(it).navigate(action)
+        binding.forgotPassword.setOnClickListener {
+            val action=LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
+            Navigation.findNavController(it).navigate(action)
 
-  }
+        }
         binding.button.setOnClickListener{
             val email=binding.editTextTextEmailAddress.text
             val password=binding.editTextTextPassword.text
@@ -79,25 +82,28 @@ class LoginFragment : Fragment() {
                 }
                 else {
                     try{
-                        /*
+
                         val apiService = ApiService()
-                        var loginModel:LoginModel= LoginModel(email.toString()
+                        var loginModel: LoginModel = LoginModel(email.toString()
                             ,password.toString())
                         apiService.postLogin(loginModel){
                             if (it != null) {
                                 Toast.makeText(view.context,
-                                    "Succesfully logined "+it.name,Toast.LENGTH_SHORT).show();
+                                    "Succesfully logined "+it.name ,Toast.LENGTH_SHORT).show();
                                 LoginSingleton.isLogin=true
                                 mainActivity.MenuController()
                             } else {
                                 Toast.makeText(view.context,
                                     "Fail",Toast.LENGTH_SHORT).show();
                             }
-                        }*/
+
+                        }
+                        }
                     }
                     catch(e:Exception){
                         e.printStackTrace()
                     }
+
 
                 }
 
