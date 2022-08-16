@@ -48,7 +48,7 @@ class SignUpFragment : Fragment() {
         binding.spinnerCity.setAdapter(cityAdapter)
 
 
-        val spinnerGender: Spinner = view.findViewById(R.id.spinner_gender)
+     val spinnerGender: Spinner = view.findViewById(R.id.spinner_gender)
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
             view.context,
@@ -104,10 +104,11 @@ class SignUpFragment : Fragment() {
 
 
 
-        binding.donTHave.setOnClickListener {
-            val action=SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
-            Navigation.findNavController(it).navigate(action)
-        }
+
+    binding.donTHave.setOnClickListener {
+     val action=SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
+        Navigation.findNavController(it).navigate(action)
+}
 
         binding.button.setOnClickListener {
             val name=    binding.nameTextview.text
@@ -151,8 +152,7 @@ class SignUpFragment : Fragment() {
                             city)
 
                         apiService.postSignUp(signUpModel){
-
-                            if (it.toString() != null) {
+                            if (it != null) {
                                 Toast.makeText(view.context,
                                     "Succesful",Toast.LENGTH_SHORT).show();
                                 val action=SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
@@ -160,13 +160,12 @@ class SignUpFragment : Fragment() {
                             } else {
                                 Toast.makeText(view.context,
                                     "Fail",Toast.LENGTH_SHORT).show();
-                                it
                             }
                         }
 
                     }
                     catch (e:Exception){
-                        e.printStackTrace()
+e.printStackTrace()
                     }
 
                 }
@@ -175,7 +174,7 @@ class SignUpFragment : Fragment() {
             }
             else{
                 Toast.makeText(view.context,
-                    "Please fill in the starred fields",Toast.LENGTH_SHORT).show()
+                        "Please fill in the starred fields",Toast.LENGTH_SHORT).show()
 
             }
 

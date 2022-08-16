@@ -11,10 +11,10 @@ interface SurveyAPI {
 
     //POST , GET ,UPDATE ,DELETE
 
-    @POST("api/user/register")
+    @POST("register")
     fun postSignUp(@Body signUpModel: SignUpModel): Call<SignUpModel>
 
-    @POST("api/user/login")
+    @POST("login")
     fun postLogin(@Body loginModel: LoginModel): Call<LoginedModel>
 
 }

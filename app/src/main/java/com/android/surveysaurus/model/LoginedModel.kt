@@ -3,7 +3,6 @@ package com.android.surveysaurus.model
 import com.google.gson.annotations.SerializedName
 
 class LoginedModel (
-
     @SerializedName("name")
     val name :String,
 
