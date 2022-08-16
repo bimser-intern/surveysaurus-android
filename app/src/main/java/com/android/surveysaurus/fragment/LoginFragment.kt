@@ -92,12 +92,12 @@ class LoginFragment : Fragment() {
                                     "Succesfully logined "+it.name ,Toast.LENGTH_SHORT).show();
                                 LoginSingleton.isLogin=true
                                 mainActivity.MenuController()
-
                             } else {
                                 Toast.makeText(view.context,
                                     "Fail",Toast.LENGTH_SHORT).show();
                             }
 
+                        }
                         }
                     }
                     catch(e:Exception){

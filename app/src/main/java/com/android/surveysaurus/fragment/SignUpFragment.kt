@@ -104,7 +104,6 @@ class SignUpFragment : Fragment() {
 
 
 
-
         binding.donTHave.setOnClickListener {
             val action=SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
             Navigation.findNavController(it).navigate(action)

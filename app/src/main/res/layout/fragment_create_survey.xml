@@ -125,11 +125,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-
                 android:fontFamily="@font/days_one"
                 android:gravity="center"
                 android:hint="Add Your Option"
-
                 android:textSize="15sp" />
 
             <ImageView
@@ -218,6 +216,7 @@
                 android:src="@drawable/vector3"
 
                 app:layout_constraintVertical_bias="0.0" />
+
         </RelativeLayout>
 
         <RelativeLayout
