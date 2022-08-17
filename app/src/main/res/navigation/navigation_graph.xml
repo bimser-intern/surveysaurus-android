@@ -51,7 +51,11 @@
         android:id="@+id/userInfoFragment"
         android:name="com.android.surveysaurus.fragment.UserInfoFragment"
         android:label="fragment_user_info"
-        tools:layout="@layout/fragment_user_info" />
+        tools:layout="@layout/fragment_user_info" >
+        <action
+            android:id="@+id/action_userInfoFragment_self"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/surveysFragment"
         android:name="com.android.surveysaurus.fragment.SurveysFragment"
