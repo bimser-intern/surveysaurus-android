@@ -29,6 +29,11 @@
     <!-- Create Survey -->
 
     <!-- Fill Survey -->
+    <string name="question">Question</string>
+    <string name="add_question">Add Your Question</string>
+    <string name="title">Title</string>
+    <string name="options">Options</string>
+    <string name="done_button">Done</string>
     <string name="see_world">See what the world said</string>
     <string name="swipe_for_comments">Swipe to see comments</string>
     <!-- Fill Survey -->

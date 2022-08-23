@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_loginFragment_to_surveysFragment"
             app:destination="@id/surveysFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -81,6 +84,9 @@
             app:argType="com.android.surveysaurus.model.ResponseIsFilled"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_fillSurveyFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/mySurveyFragment"
@@ -94,4 +100,9 @@
             android:id="@+id/action_mySurveyFragment_to_fillSurveyFragment"
             app:destination="@id/fillSurveyFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.android.surveysaurus.fragment.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>

@@ -280,6 +280,10 @@ class FillSurveyFragment : Fragment() {
 
 
         }
+        binding.seeWhatTheWorldSaid.setOnClickListener {
+            val action = FillSurveyFragmentDirections.actionFillSurveyFragmentToMapsFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
 
     }

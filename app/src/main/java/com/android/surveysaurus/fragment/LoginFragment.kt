@@ -115,7 +115,7 @@ class LoginFragment : Fragment() {
                                 LoginSingleton.isLogin = true
                                 (activity as MainActivity?)!!.MenuController()
                                 val action =
-                                    LoginFragmentDirections.actionLoginFragmentToCreateSurveyFragment()
+                                    LoginFragmentDirections.actionLoginFragmentToViewPagerFragment()
                                 Navigation.findNavController(view).navigate(action)
 
                             } else {
