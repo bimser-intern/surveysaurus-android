@@ -36,7 +36,7 @@
         android:id="@+id/surveysaurus"
         android:layout_width="180dp"
         android:layout_height="33dp"
-        android:fontFamily="@font/laila_medium"
+        android:fontFamily="@font/laila_bold"
         android:gravity="center_horizontal"
         android:text="@string/survey_saurus"
         android:textColor="#1B58E7"

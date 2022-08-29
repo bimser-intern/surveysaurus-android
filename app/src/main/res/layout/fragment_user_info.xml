@@ -49,6 +49,7 @@
         android:layout_marginEnd="70dp"
         android:background="@drawable/rounded_text"
         android:contentDescription="@string/Login"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_gender3"
         tools:ignore="TouchTargetSizeCheck" />
@@ -63,9 +64,10 @@
         android:background="@drawable/rounded_text"
         android:ems="10"
         android:inputType="textPassword"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword6"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="SpUsage,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/editTextTextPassword6"
@@ -77,6 +79,7 @@
         android:background="@drawable/rounded_text"
         android:ems="10"
         android:inputType="textPassword"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_city4"
         tools:ignore="TouchTargetSizeCheck" />
@@ -90,6 +93,7 @@
         android:layout_marginEnd="70dp"
         android:background="@drawable/rounded_text"
         android:contentDescription="@string/Login"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_country4"
         tools:ignore="TouchTargetSizeCheck" />
@@ -103,6 +107,7 @@
         android:layout_marginEnd="70dp"
         android:background="@drawable/rounded_text"
         android:contentDescription="@string/Login"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
         tools:ignore="TouchTargetSizeCheck" />
@@ -137,10 +142,11 @@
 
     <View
         android:id="@+id/spinner_gender_point2"
-        android:layout_width="12dp"
-        android:layout_height="5dp"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
         android:layout_marginStart="160dp"
-        android:background="@drawable/ok"
+        android:background="@drawable/arrow_expand"
+        android:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/spinner_gender3"
         app:layout_constraintEnd_toEndOf="@+id/spinner_gender3"
         app:layout_constraintStart_toStartOf="@+id/spinner_gender3"
@@ -148,10 +154,11 @@
 
     <View
         android:id="@+id/spinner_country_point2"
-        android:layout_width="12dp"
-        android:layout_height="5dp"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
         android:layout_marginStart="160dp"
-        android:background="@drawable/ok"
+        android:background="@drawable/arrow_expand"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/spinner_country4"
         app:layout_constraintEnd_toEndOf="@+id/spinner_country4"
         app:layout_constraintStart_toStartOf="@+id/spinner_country4"
@@ -162,7 +169,7 @@
         android:layout_width="18dp"
         android:layout_height="15dp"
         android:layout_marginStart="160dp"
-        android:background="@drawable/eye"
+        android:background="@drawable/eye_visible"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword7"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword7"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword7"
@@ -170,10 +177,11 @@
 
     <View
         android:id="@+id/spinner_city_point2"
-        android:layout_width="12dp"
-        android:layout_height="5dp"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
         android:layout_marginStart="160dp"
-        android:background="@drawable/ok"
+        android:background="@drawable/arrow_expand"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/spinner_city4"
         app:layout_constraintEnd_toEndOf="@+id/spinner_city4"
         app:layout_constraintStart_toStartOf="@+id/spinner_city4"
@@ -184,7 +192,7 @@
         android:layout_width="18dp"
         android:layout_height="15dp"
         android:layout_marginStart="160dp"
-        android:background="@drawable/eye"
+        android:background="@drawable/eye_visible"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword6"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword6"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword6"
@@ -192,8 +200,8 @@
 
     <TextView
         android:id="@+id/gender_textview3"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="49dp"
+        android:layout_height="17dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/laila_medium"
         android:text="@string/view_gender_info"
@@ -278,7 +286,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="195dp"
         android:layout_marginEnd="195dp"
-        android:fontFamily="@font/laila_medium"
+        android:fontFamily="@font/laila_bold"
         android:text="@string/personal_info"
         android:textColor="#000000"
         android:textSize="20sp"
