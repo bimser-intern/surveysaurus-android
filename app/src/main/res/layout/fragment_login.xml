@@ -37,7 +37,7 @@
         android:layout_width="201dp"
         android:layout_height="33dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="127dp"
+        android:layout_marginTop="174dp"
         android:background="@drawable/rectangle_6"
         android:elevation="50dp"
         android:fontFamily="@font/laila_medium"
@@ -49,6 +49,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <TextView
+        android:id="@+id/don_t_have_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/d_sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <TextView
         android:id="@+id/textView_mail"
@@ -78,6 +88,7 @@
         android:ems="10"
 
         android:inputType="textPassword"
+        android:paddingStart="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.322"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +103,7 @@
         android:layout_height="15dp"
 
         android:layout_marginEnd="5dp"
-        android:background="@drawable/eye"
+        android:background="@drawable/eye_visible"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPassword" />
@@ -109,6 +120,7 @@
         android:fontFamily="@font/inter_medium"
         android:hint="@string/Enter_your_mail_adress"
         android:inputType="textEmailAddress"
+        android:paddingStart="5dp"
         android:textAlignment="viewStart"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,16 +145,6 @@
     <!-- Don't have an account? Sign up Textview -->
 
     <!--Mail Star Textview -->
-
-    <TextView
-        android:id="@+id/don_t_have_"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/d_sign_up"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <TextView
         android:id="@+id/textView_yildiz"

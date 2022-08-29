@@ -7,6 +7,24 @@
     tools:context=".fragment.SignUpFragment">
 
     <!-- Confirm Password star Textview -->
+
+    <!-- Confirm Password Textbox -->
+
+    <!--Confirm Password Textview -->
+
+    <!-- Country star Textview -->
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/confirm_Password"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
     <TextView
         android:id="@+id/textView_yildiz5"
         android:layout_width="wrap_content"
@@ -17,37 +35,20 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
         app:layout_constraintStart_toEndOf="@+id/textView4" />
 
-    <!-- Confirm Password Textbox -->
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="193dp"
         android:layout_height="30dp"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/rounded_text"
         android:ems="10"
         android:inputType="textPassword"
+        android:paddingStart="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <!--Confirm Password Textview -->
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/confirm_Password"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_city" />
-
-    <!-- Country star Textview -->
     <TextView
         android:id="@+id/textView_yildiz4"
         android:layout_width="wrap_content"
@@ -70,32 +71,32 @@
         app:layout_constraintStart_toEndOf="@+id/city_textview2" />
 
     <!-- Country Textview -->
+
+    <!-- City Spinner -->
+
     <TextView
         android:id="@+id/country_textview3"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/view_country"
+        android:text="@string/select_country"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_gender"
         tools:ignore="MissingConstraints" />
 
-    <!-- City Spinner -->
     <AutoCompleteTextView
         android:id="@+id/spinner_city"
         android:layout_width="193dp"
         android:layout_height="30dp"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/rounded_text"
         android:completionThreshold="1"
         android:contentDescription="@string/Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/city_textview2"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -104,41 +105,40 @@
         android:id="@+id/spinner_country"
         android:layout_width="193dp"
         android:layout_height="30dp"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="5dp"
-        android:completionThreshold="1"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/rounded_text"
+        android:completionThreshold="1"
         android:contentDescription="@string/Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/country_textview3"
         tools:ignore="TouchTargetSizeCheck" />
 
     <!-- City  Textview -->
+    <!-- Gender Spinner -->
+
     <TextView
         android:id="@+id/city_textview2"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/view_city"
+        android:text="@string/select_city"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_country"
         tools:ignore="MissingConstraints" />
-    <!-- Gender Spinner -->
+
     <Spinner
         android:id="@+id/spinner_gender"
         android:layout_width="193dp"
         android:layout_height="30dp"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/rounded_text"
         android:contentDescription="@string/Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gender_textview"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -154,83 +154,78 @@
         app:layout_constraintStart_toEndOf="@+id/gender_textview" />
 
     <!-- Email Adress Textbox -->
+
+    <!-- Name Textview -->
+
+    <!-- Name Textbox -->
+
+    <!-- Gender Textview -->
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="193dp"
         android:layout_height="30dp"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/rounded_text"
         android:ems="10"
         android:hint="@string/Enter_your_mail_adress"
         android:inputType="textEmailAddress"
+        android:paddingStart="5dp"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mail_textview" />
 
-    <!-- Name Textview -->
-    <TextView
-        android:id="@+id/textView_mail"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="@string/view_name"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="MissingConstraints" />
-
-    <!-- Name Textbox -->
-    <EditText
-        android:id="@+id/name_textview"
-        android:layout_width="193dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/rounded_text"
-        android:ems="10"
-        android:hint="@string/Enter_name"
-        android:inputType="textEmailAddress"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_mail" />
-
-    <!-- Gender Textview -->
-    <TextView
-        android:id="@+id/gender_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="@string/view_gender"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-        tools:ignore="MissingConstraints" />
-
-    <!-- Mail Textview -->
     <TextView
         android:id="@+id/mail_textview"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/Email_Address"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_textview"
         tools:ignore="MissingConstraints" />
 
-    <!-- Name Star Textview -->
+    <TextView
+        android:id="@+id/textView_yildiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/star"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toEndOf="@+id/mail_textview" />
+
+    <EditText
+        android:id="@+id/name_textview"
+        android:layout_width="193dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_text"
+        android:ems="10"
+        android:hint="@string/Enter_name"
+        android:inputType="textEmailAddress"
+        android:paddingStart="5dp"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_mail" />
+
+    <TextView
+        android:id="@+id/textView_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/view_name"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView_yildiz3"
         android:layout_width="6dp"
@@ -241,38 +236,70 @@
         app:layout_constraintBottom_toTopOf="@+id/name_textview"
         app:layout_constraintStart_toEndOf="@+id/textView_mail" />
 
+    <!-- Mail Textview -->
+
+    <!-- Name Star Textview -->
+
     <!-- Mail Star Textview -->
-    <TextView
-        android:id="@+id/textView_yildiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/star"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toEndOf="@+id/mail_textview" />
 
     <!-- Password Textbox -->
+
+    <!-- Password visible Textview -->
+
+    <TextView
+        android:id="@+id/gender_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/select_gender"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="193dp"
         android:layout_height="30dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/rounded_text"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <!-- Password visible Textview -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Password"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_city" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="6dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/star"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
     <View
         android:id="@+id/visible_password"
         android:layout_width="18dp"
         android:layout_height="15dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/eye"
+        android:background="@drawable/eye_visible"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPassword" />
@@ -283,7 +310,7 @@
         android:layout_width="18dp"
         android:layout_height="15dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/eye"
+        android:background="@drawable/eye_visible"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword2"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPassword2" />
@@ -322,39 +349,21 @@
         app:layout_constraintTop_toTopOf="@+id/spinner_gender" />
 
     <!-- Password star Textview -->
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="6dp"
-        android:layout_height="19dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/star"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
 
     <!-- Password Textview -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/Password"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_city" />
 
     <!-- Continue with Google -->
+
     <Button
         android:id="@+id/button_google"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
         android:background="@drawable/reactangle2"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/ic_google_logo"
-        android:text="Continue with Google"
+        android:text="@string/continue_with_button"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
@@ -363,37 +372,39 @@
         tools:ignore="HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
 
     <!-- Sign up Button -->
+
+    <!-- Already have an account? Sign in Textview -->
+
+    <!-- Or Textview -->
+
     <TextView
         android:id="@+id/button"
         android:layout_width="201dp"
-        android:layout_height="48dp"
+        android:layout_height="33dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="85dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="128dp"
         android:background="@drawable/rectangle_6"
         android:elevation="50dp"
-        android:fontFamily="@font/laila_medium"
+        android:fontFamily="@font/laila_bold"
         android:outlineSpotShadowColor="@color/black"
         android:text="@string/Sign_up_button"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
-    <!-- Already have an account? Sign in Textview -->
     <TextView
         android:id="@+id/don_t_have_"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="160dp"
         android:text="@string/Sign_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_city" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
-    <!-- Or Textview -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="23dp"
