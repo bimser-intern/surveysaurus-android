@@ -176,6 +176,9 @@ class SignUpFragment : Fragment(), OnItemClickListener {
                         "Do not left spaces in your password", Toast.LENGTH_SHORT
                     ).show()
                 }
+                /* isValidPasswordFormat function is at the bottom of the page.
+                 * This function checks if the entered password meets the qualifications.
+                 */
                 else if(!isValidPasswordFormat(password)){
                     Toast.makeText(
                         view.context,

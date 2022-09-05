@@ -45,9 +45,7 @@ class SurveysFragment : Fragment(), SurveyAdapter.Listener {
         binding.surveysRecycler.adapter = surveyAdapter
 
         try {
-
             val apiService = ApiService()
-
             apiService.getSurveys {
 
                 if (it != null) {
@@ -64,7 +62,6 @@ class SurveysFragment : Fragment(), SurveyAdapter.Listener {
                         controlSample=true
                     }
 
-
                     try {
                         val apiService = ApiService()
                         apiService.getAllSurveys { item->
@@ -78,7 +75,6 @@ class SurveysFragment : Fragment(), SurveyAdapter.Listener {
                                     println("oldu bu iş")
                                     controlSurveys=true
                                 }
-
 
                             }
                             else {
@@ -96,8 +92,6 @@ class SurveysFragment : Fragment(), SurveyAdapter.Listener {
 
                     println("Control")
 
-
-
                 } else {
                     Toast.makeText(
                         view.context,
@@ -111,14 +105,11 @@ class SurveysFragment : Fragment(), SurveyAdapter.Listener {
             e.printStackTrace()
         }
 
-
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
 
     }
 
@@ -127,7 +118,6 @@ class SurveysFragment : Fragment(), SurveyAdapter.Listener {
         try {
             val apiService = ApiService()
             val isfilled: IsFilledModel = IsFilledModel(mySurveyModel.title)
-
 
             apiService.isFilled(isfilled){
                 if (it.toString()!=null) {
@@ -154,6 +144,5 @@ class SurveysFragment : Fragment(), SurveyAdapter.Listener {
         }
 
     }
-
 
 }

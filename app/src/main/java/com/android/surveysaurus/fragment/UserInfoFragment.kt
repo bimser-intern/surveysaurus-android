@@ -32,6 +32,7 @@ class UserInfoFragment : Fragment(), AdapterView.OnItemClickListener {
     private var controlGender : ArrayList<String> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         try {
             val apiService = ApiService()
             apiService.getUserInfo(){
@@ -131,6 +132,7 @@ class UserInfoFragment : Fragment(), AdapterView.OnItemClickListener {
         super.onViewCreated(view, savedInstanceState)
         binding.visiblePassword8.setOnClickListener {
 
+            // Making the password visible and not visible
             if(isVisible==false){
                 binding.editTextTextPassword6.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD// PRESSED
@@ -142,8 +144,8 @@ class UserInfoFragment : Fragment(), AdapterView.OnItemClickListener {
                 isVisible=false
             }
         }
+        // Making the confirm password visible and not visible
         binding.visiblePassword7.setOnClickListener {
-
             if(isVisible2==false){
                 binding.editTextTextPassword7.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD// PRESSED
@@ -170,7 +172,7 @@ class UserInfoFragment : Fragment(), AdapterView.OnItemClickListener {
 
 
 
-
+        //Update Button
         binding.button2.setOnClickListener {
              if( binding.nameTextview3.text.toString().isNullOrEmpty()
                  ||binding.editTextTextEmailAddress3.text.toString().isNullOrEmpty()
@@ -194,7 +196,6 @@ class UserInfoFragment : Fragment(), AdapterView.OnItemClickListener {
              }
             else{
                  try {
-
                      val apiService = ApiService()
                      val updateModel: UpdateModel = UpdateModel(
                          binding.nameTextview3.text.toString(),
@@ -273,7 +274,6 @@ class UserInfoFragment : Fragment(), AdapterView.OnItemClickListener {
                                  view.context,
                                  "Failed to update user information", Toast.LENGTH_SHORT
                              ).show();
-
                          }
 
                      }
@@ -281,14 +281,7 @@ class UserInfoFragment : Fragment(), AdapterView.OnItemClickListener {
                      e.printStackTrace()
                  }
              }
-
-
-
-
-
         }
-
-
     }
 
     override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {

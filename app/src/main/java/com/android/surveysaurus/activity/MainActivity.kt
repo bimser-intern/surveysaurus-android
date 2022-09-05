@@ -22,6 +22,7 @@ import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 
 class MainActivity : AppCompatActivity() {
+    //Variables
     private lateinit var profileActionMenuView: ActionMenuView
     private lateinit var barActionMenuView: ActionMenuView
     private lateinit var profileLoginActionMenuView: ActionMenuView
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var  menu :MenuItem
 
+    // onCreate() is called when the when the activity is first created.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -41,40 +43,32 @@ class MainActivity : AppCompatActivity() {
             com.microsoft.appcenter.analytics.Analytics::class.java, Crashes::class.java
         )
         Analytics.trackEvent("My custom event");
+        /* ActionMenuView is a presentation of a series of menu options as a View. */
         profileActionMenuView = findViewById(R.id.expanded_profile)
-
         barActionMenuView = findViewById(R.id.expanded_bar)
         profileLoginActionMenuView = findViewById(R.id.expanded_login_profile)
-
         barLoginActionMenuView = findViewById(R.id.expanded_login_bar)
 
+
+        /* MenuInflater class is used to instantiate menu XML files into Menu objects. */
         menuInflater.inflate(R.menu.logined_profile_menu, profileLoginActionMenuView.menu)
         menuInflater.inflate(R.menu.logined_bar_menu, barLoginActionMenuView.menu)
         menuInflater.inflate(R.menu.profile_menu, profileActionMenuView.menu)
         menuInflater.inflate(R.menu.bar_menu, barActionMenuView.menu)
 
-
-
-
-
-
         MenuController()
-
-
     }
-
-
+    // When you press the button (logo) at the top middle, it sends you back to the main page.
     fun HomeClicked(view: View) {
         binding.fragmentContainerView.findNavController()
             .navigate(R.id.viewPagerFragment)
     }
 
-
+    // Brings different bars to logined and not logined users.
     fun MenuController() {
         barLoginActionMenuView.menu.findItem(R.id.user_bar).setTitle(LoginSingleton.name)
-
+        //Singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance.
         if (LoginSingleton.isLogin) {
-
             profileLoginActionMenuView.isVisible = true
             barLoginActionMenuView.isVisible = true
             profileActionMenuView.isVisible = false
@@ -104,14 +98,11 @@ class MainActivity : AppCompatActivity() {
                             .navigate(R.id.viewPagerFragment)
                         ; true
                     }
-
                     else -> {
                         println("nothin "); true
                     }
                 }
-
             }
-
 
         } else {
             profileLoginActionMenuView.isVisible = false
@@ -140,11 +131,8 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-
         }
     }
-
-
 }
 
 

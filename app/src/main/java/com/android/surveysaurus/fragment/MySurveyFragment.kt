@@ -41,7 +41,6 @@ class MySurveyFragment : Fragment(), SurveyAdapter.Listener {
 
         binding.mySurveysRecycler.layoutManager = GridLayoutManager(view.context, 2)
 
-
         return view
     }
 

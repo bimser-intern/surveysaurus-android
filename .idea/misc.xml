@@ -11,6 +11,7 @@
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/drawable/rounded_text.xml" value="0.192" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/add_option_lay.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/custom_toolbar.xml" value="0.1" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/fragment_create_survey.xml" value="0.264" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/fragment_fill_survey.xml" value="0.176" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/fragment_home.xml" value="0.22781065088757396" />
@@ -21,8 +22,11 @@
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/fragment_user_info.xml" value="0.6" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/fragment_view_pager.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/layout/survey_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/menu/bar_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/menu/logined_bar_menu.xml" value="0.1125" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/menu/logined_profile_menu.xml" value="0.1125" />
+        <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/menu/profile_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.198" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Saurus/app/src/main/res/layout/activity_map.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Saurus/app/src/main/res/layout/add_option_lay.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Saurus/app/src/main/res/layout/fragment_create_survey.xml" value="0.2210144927536232" />

@@ -32,6 +32,7 @@ private  var _binding: FragmentHomeBinding?=null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Navigates the user to the create survey page when the button is pressed.
         binding.createASurvey.setOnClickListener{
             val action = ViewPagerFragmentDirections.actionViewPagerFragmentToCreateSurveyFragment()
             Navigation.findNavController(it).navigate(action)

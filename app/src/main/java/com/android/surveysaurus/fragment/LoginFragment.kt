@@ -38,9 +38,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        /* This is used to bind the button to visible or not */
         binding.visiblePassword.setOnClickListener {
-
             if(isVisible==false){
                 binding.editTextTextPassword.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD// PRESSED
@@ -53,13 +52,15 @@ class LoginFragment : Fragment() {
             }
         }
 
-
+        /* This is used to navigate the user to the sign up page. */
         binding.donTHave.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
             Navigation.findNavController(it).navigate(action)
         }
 
-
+        /* This is used to check the users e-mail and password
+         * and make sure they entered the right e-mail and password.
+         * This also pulls the other info's of the user.  */
         binding.button.setOnClickListener {
             val email = binding.editTextTextEmailAddress.text
             val password = binding.editTextTextPassword.text
@@ -142,6 +143,7 @@ class LoginFragment : Fragment() {
                                             }
                                         }
                                     }
+
                                     if(survey==null&&filled==null){
                                         val action =
                                             LoginFragmentDirections.actionLoginFragmentToViewPagerFragment()
@@ -149,10 +151,6 @@ class LoginFragment : Fragment() {
                                     }
 
                                 }
-
-
-
-
                             } else {
                                 Toast.makeText(
                                     view.context,
@@ -165,24 +163,25 @@ class LoginFragment : Fragment() {
                         e.printStackTrace()
                     }
 
-
                 }
 
 
             }
+            // If e-mail field is empty
             else if(email.isNullOrEmpty()) {
                 Toast.makeText(
                     view.context,
                     "Please fill the E-Mail field", Toast.LENGTH_SHORT
                 ).show()
             }
+            // If password field is empty
             else if(password.isNullOrEmpty()) {
                 Toast.makeText(
                     view.context,
                     "Please fill your password to continue", Toast.LENGTH_SHORT
                 ).show()
             }
-
+            // If both fields are empty
             else {
                 Toast.makeText(
                     view.context,
