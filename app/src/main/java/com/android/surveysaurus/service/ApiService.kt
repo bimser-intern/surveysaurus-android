@@ -16,7 +16,6 @@ class ApiService {
                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                     println(t.message)
                     onResult(null)
-
                 }
 
                 override fun onResponse(
@@ -24,7 +23,6 @@ class ApiService {
                     response: Response<ResponseBody>
                 ) {
                     val loginedUser = response.body()
-
 
                     println(response.message())
                     onResult(loginedUser)
@@ -54,8 +52,6 @@ class ApiService {
                         println("null  control")
                         onResult(null,response.errorBody()?.string()?.substringAfter("Error:")?.dropLast(2))
                     }
-
-
                 }
             }
         )
@@ -78,7 +74,6 @@ class ApiService {
                     val createdSurvey = response.body()
 
                     println(response.message())
-
                     onResult(createdSurvey)
                 }
             }
@@ -121,7 +116,6 @@ class ApiService {
                     }
 
                     println(response.message().toString())
-
 
                 }
             }
@@ -248,8 +242,6 @@ class ApiService {
                 ) {
                     var filled = response.body()?.data?.surveys
 
-
-
                     onResult(filled)
                 }
             }
@@ -274,10 +266,7 @@ class ApiService {
                 ) {
                     var filled = response.body()?.data?.surveys
 
-
                     println(response.message())
-
-
                     onResult(filled)
                 }
             }
@@ -302,11 +291,8 @@ class ApiService {
                 ) {
                     var filled = response.body()
 
-
                     println(response.message())
                     println(filled?.data?.choice)
-
-
                     onResult(filled)
                 }
             }
@@ -332,11 +318,7 @@ class ApiService {
                 ) {
                     var filled = response.body()
 
-
                     println(filled?.data?.question)
-
-
-
                     onResult(filled)
                 }
             }
@@ -371,13 +353,6 @@ class ApiService {
 
                         onResult(null)
                     }
-
-
-
-
-
-
-
                 }
             }
         )
@@ -407,11 +382,7 @@ class ApiService {
                       println("null  control")
                         onResult(null)
                   }
-
                     println(response.message())
-
-
-
                 }
             }
         )
@@ -444,7 +415,6 @@ onResult(null)
                     println(response.message())
                     onResult(user.data)
 
-
                 }
             }
         )
@@ -467,12 +437,9 @@ onResult(null)
                     response: Response<ResponseMap>
                 ) {
                     var filled = response.body()?.data
-
-
+                    
                     println(response.body()?.message)
-
                     println(filled?.csv)
-
                     onResult(filled)
                 }
             }

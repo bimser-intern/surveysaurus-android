@@ -35,10 +35,9 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
+    //Called to have the fragment instantiate its user interface view.
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -51,10 +50,13 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
         optionAdapter = OptionAdapter(optionSize, this@CreateSurveyFragment)
         binding.additionalOptions.adapter = optionAdapter
 
-
         return view
     }
 
+    /*
+     * Called immediately after onCreateView has returned, but before any saved state has been restored in to the view.
+     * This gives subclasses a chance to initialize themselves once they know their view hierarchy has been completely created.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -65,6 +67,7 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
 
         }
 
+        //Binding the create button to create surveys as long as it meets the qualifications.
         binding.createButton.setOnClickListener {
 
             val question = binding.addQuestion.text.toString()
@@ -74,11 +77,6 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
 
             if (!binding.addOption2.text.toString().isNullOrEmpty())
                 optionList.add(binding.addOption2.text.toString())
-
-
-
-
-
 
             if (isThereAdditional) {
                 val holder: OptionAdapter.OptionHolder
@@ -115,6 +113,7 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
                                         view.context,
                                         "Succesful", Toast.LENGTH_SHORT
                                     ).show();
+                                    // If creating the survey is succesful, user is redirected to their survey page.
                                     val action =
                                         CreateSurveyFragmentDirections.actionCreateSurveyFragmentToMySurveyFragment()
                                     Navigation.findNavController(view).navigate(action)
@@ -130,6 +129,8 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
                         } catch (e: Exception) {
                             e.printStackTrace()
                         }
+                        /* If person is not logged in after creating the survey
+                           they are navigated to the login page */
                     } else {
                         var surveyModel: SurveyModel = SurveyModel(question, title, optionList)
                         val action =
@@ -151,7 +152,6 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
                 ).show();
 
             }
-
 
         }
 

@@ -18,7 +18,7 @@ class ViewPagerFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
     }
-
+    /* This fragment is used to slide the page to the left,down or up */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,9 +37,6 @@ class ViewPagerFragment : Fragment() {
             val index=ViewPagerFragmentArgs.fromBundle(it).index
             viewPager.setCurrentItem(index)
         }
-
-
-
         return view
     }
 
@@ -57,9 +54,7 @@ class ViewPagerFragment : Fragment() {
             val index=ViewPagerFragmentArgs.fromBundle(it).index
             viewPager.setCurrentItem(index)
         }
-
     }
-
 
     override fun onResume() {
         super.onResume()
@@ -81,12 +76,9 @@ class ViewPagerFragment : Fragment() {
         binding.viewPager.adapter = null //I don't remember why I did this, I gues
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-
     }
-
 
 }

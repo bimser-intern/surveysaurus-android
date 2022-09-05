@@ -63,7 +63,7 @@ class FillSurveyFragment : Fragment() {
 
             binding.addQuestionFill.text = survey.question
             binding.addTitleFill.text = survey.title
-
+            // Options are gathered from the adapter
             for (item in 0 until survey.choices.size) {
 
                 val option1: TextView = TextView(view.context)
