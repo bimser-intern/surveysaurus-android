@@ -19,14 +19,14 @@ import com.android.surveysaurus.databinding.CommentLayoutBinding
 import com.android.surveysaurus.databinding.SurveyLayoutBinding
 import com.android.surveysaurus.fragment.MySurveyFragmentDirections
 import com.android.surveysaurus.model.ListedComment
+import com.android.surveysaurus.model.ListedSurvey
 
 class CommentAdapter(
     private val commentList: ArrayList<ListedComment>,
-    private val listener: Listener) : RecyclerView.Adapter<CommentAdapter.CommentHolder>() {
+    private val listener: Listener
+    ) : RecyclerView.Adapter<CommentAdapter.CommentHolder>() {
 
     interface Listener {
-        fun onItemClick(myCommentModel: ListedComment)
-        fun onItemClick2()
     }
 
 
@@ -60,11 +60,6 @@ class CommentAdapter(
 
         }
 
-        holder.itemView.setOnClickListener {
-
-            listener.onItemClick(commentList.get(position))
-
-        }
 
     }
     override fun getItemCount(): Int {

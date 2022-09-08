@@ -91,7 +91,7 @@ class CreateSurveyFragment : Fragment(), OptionAdapter.Listener {
                         ?.findViewById<TextView>(com.android.surveysaurus.R.id.add_optional)
                         ?.text
 
-                  if (!addition.toString().isNullOrEmpty())
+                    if (!addition.toString().isNullOrEmpty())
                         optionList.add(addition.toString())
                     else
                         isNullOption=true

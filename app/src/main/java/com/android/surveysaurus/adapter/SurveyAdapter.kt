@@ -15,7 +15,6 @@ import androidx.navigation.Navigation
 import androidx.navigation.navOptions
 import androidx.recyclerview.widget.RecyclerView
 import com.android.surveysaurus.R
-
 import com.android.surveysaurus.databinding.SurveyLayoutBinding
 import com.android.surveysaurus.fragment.MySurveyFragmentDirections
 import com.android.surveysaurus.model.ListedSurvey
@@ -37,8 +36,6 @@ class SurveyAdapter(
         arrayListOf(R.drawable.survey, R.drawable.survey1, R.drawable.survey2)
 
     class SurveyHolder(val binding: SurveyLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SurveyHolder {

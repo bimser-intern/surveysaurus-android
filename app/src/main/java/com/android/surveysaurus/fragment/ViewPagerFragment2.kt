@@ -5,12 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.android.surveysaurus.adapter.SlidePageAdapter2
 import com.android.surveysaurus.databinding.FragmentViewPager2Binding
 
 
-class ViewPagerFragment2 : Fragment() {
+  class ViewPagerFragment2 : Fragment() {
     private var _binding: FragmentViewPager2Binding? = null
     private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +28,7 @@ class ViewPagerFragment2 : Fragment() {
             val survey = ViewPagerFragment2Args.fromBundle(it).surveyModel
           val isFilled = ViewPagerFragment2Args.fromBundle(it).isFilled
             val fragmentList = arrayListOf<Fragment>(
-                FillSurveyFragment(survey,isFilled),
+                FillSurveyFragment(survey, isFilled),
                 CommentFragment()
             )
             val adapter2 = SlidePageAdapter2(fragmentList, requireActivity().supportFragmentManager)
@@ -46,7 +45,7 @@ class ViewPagerFragment2 : Fragment() {
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         arguments?.let {

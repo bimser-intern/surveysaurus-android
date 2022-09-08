@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Kerem/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_dropdown_item_1line.xml" value="0.1" />
+        <entry key="..\:/Users/Kerem/Desktop/Deneme/surveysaurus-android/app/src/main/res/layout/comment_layout.xml" value="0.2" />
+        <entry key="..\:/Users/Kerem/Desktop/Deneme/surveysaurus-android/app/src/main/res/layout/custom_toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kerem/Desktop/Deneme/surveysaurus-android/app/src/main/res/layout/fragment_comment.xml" value="0.12635869565217392" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/drawable-v24/rectangle_6.xml" value="0.255" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/drawable/create_button.xml" value="0.255" />
         <entry key="..\:/Users/Kerem/Desktop/Projects/surveysaurus-android/app/src/main/res/drawable/done_button_edge.xml" value="0.255" />
@@ -88,8 +91,6 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/SurveySaurus/surveysaurus-android/app/src/main/res/menu/logined_bar_menu.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/SurveySaurus/surveysaurus-android/app/src/main/res/menu/logined_profile_menu.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/SurveySaurus/surveysaurus-android/app/src/main/res/menu/profile_menu.xml" value="0.2" />
-        <entry key="..\:/Users/Sefa Can Pehlivan/StudioProjects/surveysaurus-android/app/src/main/res/layout/comment_layout.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/Sefa Can Pehlivan/StudioProjects/surveysaurus-android/app/src/main/res/layout/fragment_comment.xml" value="0.264" />
       </map>
     </option>
   </component>
