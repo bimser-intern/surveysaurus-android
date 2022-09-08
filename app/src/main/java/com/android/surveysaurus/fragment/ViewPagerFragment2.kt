@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.android.surveysaurus.adapter.SlidePageAdapter2
 import com.android.surveysaurus.databinding.FragmentViewPager2Binding
 

@@ -478,4 +478,48 @@ onResult(null)
             }
         )
     }
+
+    fun getComments(title:String, onResult: (ArrayList<ListedComment>?) -> Unit) {
+        val retrofit = ServiceBuilder.buildService(SurveyAPI::class.java)
+        retrofit.getComments(title).enqueue(
+            object : Callback<com.android.surveysaurus.model.Response> {
+                override fun onFailure(
+                    call: Call<com.android.surveysaurus.model.Response>,
+                    t: Throwable
+                ) {
+                    println(t.message)
+                    onResult(null)
+                }
+
+                override fun onResponse(
+                    call: Call<com.android.surveysaurus.model.Response>,
+                    response: Response<com.android.surveysaurus.model.Response>
+                ) {
+                    var responseList = response.body()!!.data!!.comments!!
+                    var listedComments: ArrayList<ListedComment> = ArrayList()
+                    for (item in 0 until responseList.size) {
+                        var listedComment: ListedComment = ListedComment(
+                            responseList.get(item).comment,
+                            responseList.get(item).commentID,
+                            responseList.get(item).report,
+                            responseList.get(item).upvote,
+                            responseList.get(item).surveytitle,
+                            responseList.get(item).author,
+                            responseList.get(item).deletable,
+                            responseList.get(item).time
+
+                        )
+                        listedComments.add(listedComment)
+                    }
+
+                    println(response.message().toString())
+
+                    onResult(listedComments)
+                }
+            }
+        )
+    }
+
 }
+
+

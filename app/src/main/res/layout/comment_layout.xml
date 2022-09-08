@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comment_layout"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="1dp">
+
+    <TextView
+        android:id="@+id/comment_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/upvote_picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/author_picture" />
+
+    <ImageView
+        android:id="@+id/upvote_picture"
+        android:layout_width="30dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_recycler"
+        app:srcCompat="@drawable/ic_upvoteempty" />
+
+    <ImageView
+        android:id="@+id/report_picture"
+        android:layout_width="30dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/comment_recycler"
+        app:srcCompat="@drawable/ic_reportempty" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="20dp"
+        android:text="Report"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/report_picture"
+        app:layout_constraintTop_toBottomOf="@+id/comment_recycler" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="19dp"
+        android:text="Reply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reply_picture"
+        app:layout_constraintTop_toBottomOf="@+id/comment_recycler" />
+
+    <ImageView
+        android:id="@+id/reply_picture"
+        android:layout_width="30dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/comment_recycler"
+        app:srcCompat="@drawable/ic_reply" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="1dp"
+        android:text="Upvote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reply_picture"
+        app:layout_constraintStart_toEndOf="@+id/upvote_picture"
+        app:layout_constraintTop_toBottomOf="@+id/comment_recycler" />
+
+    <ImageView
+        android:id="@+id/author_picture"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/comment_recycler"
+        app:layout_constraintEnd_toStartOf="@+id/authorname_recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selected" />
+
+    <TextView
+        android:id="@+id/authorname_recycler"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="7dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/comment_recycler"
+        app:layout_constraintStart_toEndOf="@+id/author_picture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

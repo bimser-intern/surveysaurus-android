@@ -55,4 +55,7 @@ interface SurveyAPI {
     @GET("api/survey/allsurveys")
     fun getAllSurveys(@Query("queue") queue: Int): Call<Response>
 
+    @GET("api/comment/comments")
+    fun getComments(@Query("title") title: String): Call<Response>
+
 }
