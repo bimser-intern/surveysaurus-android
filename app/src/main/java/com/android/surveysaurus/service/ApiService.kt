@@ -116,8 +116,8 @@ class ApiService {
                         }
                         onResult(listedSurveys,true)
                     }
-                 else{
-                     onResult(null,false)
+                    else{
+                        onResult(null,false)
                     }
 
                     println(response.message().toString())
@@ -354,7 +354,7 @@ class ApiService {
                     t: Throwable
                 ) {
                     println(t.message)
-              onResult(null)
+                    onResult(null)
                 }
 
                 override fun onResponse(
@@ -392,21 +392,21 @@ class ApiService {
                     t: Throwable
                 ) {
                     println(t.message)
-                  onResult(null)
+                    onResult(null)
                 }
 
                 override fun onResponse(
                     call: Call<ResponseBody>,
                     response: Response<ResponseBody>
                 ) {
-                  if(response.message().toString().equals("OK"))
-                  {println("ok control")
-                      onResult("Success")
-                  }
+                    if(response.message().toString().equals("OK"))
+                    {println("ok control")
+                        onResult("Success")
+                    }
                     else{
-                      println("null  control")
+                        println("null  control")
                         onResult(null)
-                  }
+                    }
 
                     println(response.message())
 
@@ -426,7 +426,7 @@ class ApiService {
                     t: Throwable
                 ) {
                     println(t.message)
-onResult(null)
+                    onResult(null)
                 }
 
                 override fun onResponse(
@@ -435,11 +435,11 @@ onResult(null)
                 ) {
 
                     val user=response.body()
-                   LoginSingleton.name =user!!.data!!.name
-                           LoginSingleton.city =user!!.data!!.city
-                           LoginSingleton.country =user!!.data!!.country
-                           LoginSingleton.gender =user!!.data!!.gender
-                           LoginSingleton.email =user!!.data!!.email
+                    LoginSingleton.name =user!!.data!!.name
+                    LoginSingleton.city =user!!.data!!.city
+                    LoginSingleton.country =user!!.data!!.country
+                    LoginSingleton.gender =user!!.data!!.gender
+                    LoginSingleton.email =user!!.data!!.email
 
                     println(response.message())
                     onResult(user.data)
@@ -478,4 +478,48 @@ onResult(null)
             }
         )
     }
+
+    fun getComments(title:String, onResult: (ArrayList<ListedComment>?) -> Unit) {
+        val retrofit = ServiceBuilder.buildService(SurveyAPI::class.java)
+        retrofit.getComments(title).enqueue(
+            object : Callback<com.android.surveysaurus.model.Response> {
+                override fun onFailure(
+                    call: Call<com.android.surveysaurus.model.Response>,
+                    t: Throwable
+                ) {
+                    println(t.message)
+                    onResult(null)
+                }
+
+                override fun onResponse(
+                    call: Call<com.android.surveysaurus.model.Response>,
+                    response: Response<com.android.surveysaurus.model.Response>
+                ) {
+                    var responseList = response.body()!!.data!!.comments!!
+                    var listedComments: ArrayList<ListedComment> = ArrayList()
+                    for (item in 0 until responseList.size) {
+                        var listedComment: ListedComment = ListedComment(
+                            responseList.get(item).comment,
+                            responseList.get(item).commentID,
+                            responseList.get(item).report,
+                            responseList.get(item).upvote,
+                            responseList.get(item).surveytitle,
+                            responseList.get(item).author,
+                            responseList.get(item).deletable,
+                            responseList.get(item).time
+
+                        )
+                        listedComments.add(listedComment)
+                    }
+
+                    println(response.message().toString())
+
+                    onResult(listedComments)
+                }
+            }
+        )
+    }
+
 }
+
+
